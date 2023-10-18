@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Products Page</title>
+    <link rel="icon" href="./data/profile.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/6e31ec7c18.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="h-[55px] bg-slate-300 px-12 flex items-center justify-end gap-6">
+      <div class="flex items-center gap-5">
+        <img id="img_user" class="h-8 w-8 rounded-full" src="" />
+        <div class="text-black" id="username"></div>
+      </div>
+      <button class="bg-red-500 hover:bg-red-700 duration-300 text-white rounded-md p-2 flex items-center gap-2" onclick="onLogout()">Logout<i class="fa-solid fa-right-from-bracket"></i></button>
+    </header>
+
+    <!-- Content -->
+    <div class="flex justify-center items-center p-6">
+      <h1 class="text-3xl">Product Page</h1>
+    </div>
+    <form class="flex flex-col px-12 gap-5">
+      <div>
+        <div>
+          <label for="inputName">Product Name:</label>
+        </div>
+        <input type="text" id="inputName" class="p-2 border border-gray-300 focus:outline-none rounded-md w-full" required />
+        <div id="alertName" class="hidden text-red-500 italic text-sm">This name is not valid<br />Example: Samsung S20</div>
+      </div>
+      <div>
+        <div>
+          <label for="inputPrice">Product Price:</label>
+        </div>
+        <input type="number" id="inputPrice" class="p-2 border border-gray-300 focus:outline-none rounded-md w-full" required />
+        <div id="alertPrice" class="hidden text-red-500 italic text-sm">This price is not valid<br />Minimum Price: 100</div>
+      </div>
+      <div>
+        <div>
+          <label for="inputCategory">Product Category:</label>
+        </div>
+        <select name="category" id="inputCategory" class="p-2 border border-gray-300 focus:outline-none rounded-md w-full" required>
+          <option value="Smartphone" selected>Smartphone</option>
+          <option value="TV">TV</option>
+          <option value="Laptop">Laptop</option>
+        </select>
+      </div>
+      <div>
+        <div>
+          <label for="inputCondition">Product Condition:</label>
+        </div>
+        <select name="category" id="inputCondition" class="p-2 border border-gray-300 focus:outline-none rounded-md w-full" required>
+          <option class="bg-green-700 text-white" value="Excellent" selected>Excellent</option>
+          <option class="bg-yellow-500 text-white" value="Good">Good</option>
+          <option class="bg-red-500 text-white" value="Bad">Bad</option>
+        </select>
+      </div>
+      <div class="flex justify-center gap-5">
+        <button id="btnAdd" class="p-2 bg-blue-700 rounded-md text-white" type="button">Add Product</button>
+        <button id="btnClear" class="p-2 outline outline-1 outline-blue-700 hover:bg-blue-700 hover:text-white rounded-md text-blue-700" type="button">Clear Form</button>
+      </div>
+      <input id="inputSearch" class="p-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded-md" placeholder="Search By Name..." type="search" />
+    </form>
+    <div class="flex justify-center mt-10 px-12">
+      <table class="w-full">
+        <thead class="border-b">
+          <th>Index</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Category</th>
+          <th>Condition</th>
+          <th>Actions</th>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+  </body>
+  <script src="./js/index.js"></script>
+</html>

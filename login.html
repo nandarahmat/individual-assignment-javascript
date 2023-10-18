@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Login Page | Nanda Rahmat N</title>
+    <link rel="icon" href="./data/profile.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/6e31ec7c18.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div></div>
+    <div class="h-screen w-full flex justify-center items-center bg-slate-200">
+      <form id="myForm">
+        <div class="p-8 bg-white flex flex-col justify-center rounded-lg gap-3 w-[400px] shadow-lg">
+          <h2 class="text-3xl text-blue-950 font-semibold text-center flex flex-col justify-center gap-2"><i class="fa-solid fa-user-lock"></i>Login Page</h2>
+          <hr />
+          <div class="flex flex-col">
+            <label for="username">Username:</label>
+            <input
+              class="p-2 ps-3 border-0 border-b-2 bg-slate-50 focus:outline-none focus:ring-0 duration-150 transition-[border] focus:border-0 focus:border-b-2 focus:border-blue-400 rounded-md"
+              type="text"
+              id="username"
+              placeholder="Type your username..."
+            />
+          </div>
+          <div class="flex flex-col">
+            <label for="password">Password:</label>
+            <div class="relative">
+              <input
+                class="p-2 ps-3 border-0 border-b-2 bg-slate-50 focus:outline-none focus:ring-0 duration-150 transition-[border] focus:border-0 focus:border-b-2 focus:border-blue-400 rounded-md w-full"
+                type="password"
+                id="password"
+                placeholder="Type your password..."
+              />
+              <a id="togglePassword">
+                <span id="open-eye" class="absolute right-3 top-1/2 transform -translate-y-1/2 hidden cursor-pointer">
+                  <i class="fa-solid fa-eye"></i>
+                </span>
+                <span id="closed-eye" class="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer">
+                  <i class="fa-solid fa-eye-slash"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="flex justify-center mt-5">
+            <button class="p-2 flex flex-row justify-center items-center gap-2 rounded-md bg-blue-700 hover:bg-blue-900 duration-300 text-white font-semibold w-full" id="btn_login" type="submit">
+              <i class="fa-solid fa-right-to-bracket"></i>
+              Login
+            </button>
+          </div>
+        </div>
+      </form>
+      <script type="module" src="./js/login.js"></script>
+    </div>
+  </body>
+</html>
